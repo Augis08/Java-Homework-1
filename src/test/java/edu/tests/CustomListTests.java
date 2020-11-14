@@ -17,6 +17,12 @@ public class CustomListTests {
      */
 
     @Test
+    void removeAT_given_intIndex_return_listWithoutRemovedElement() {
+
+
+    }
+
+    @Test
     public void getAll_given_emptyList_returns_emptyArray(){
         // Given
         CustomList list = new CustomList();
