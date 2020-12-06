@@ -19,4 +19,8 @@ public class ShoppingList {
                 .mapToDouble(shop -> shop.getShoppingBag().getTotalPrice())
                 .sum();
     }
+
+    public List<Shop> getShops() {
+        return shops;
+    }
 }

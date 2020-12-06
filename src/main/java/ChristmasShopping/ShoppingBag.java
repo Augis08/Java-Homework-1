@@ -1,8 +1,6 @@
 package ChristmasShopping;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class ShoppingBag {
 
@@ -79,8 +77,8 @@ public class ShoppingBag {
         return stringBuilder.toString();
     }
 
-    public int getItems() {
-        return items.size();
+    public LinkedList<Item> getItems() {
+        return items;
     }
 
 
