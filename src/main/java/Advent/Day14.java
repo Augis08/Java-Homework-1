@@ -27,7 +27,7 @@ public class Day14 {
             for (long i : getChangedAddresses(mask, address))
                 values.put(i, value);
         }
-        return values.values().stream().reduce( 0l, Long :: sum);
+        return values.values().stream().reduce(0L, Long :: sum);
     }
 
     private static List<Long> getChangedAddresses(String mask, int address) {
@@ -40,7 +40,6 @@ public class Day14 {
             String newAddress = s;
             for (char ch : chars) {
                 newAddress = newAddress.replaceFirst("X", String.valueOf(ch));
-                continue;
             }
             newAddresses.add(changeToDecimal(newAddress));
         }
