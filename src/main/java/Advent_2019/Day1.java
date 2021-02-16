@@ -19,7 +19,7 @@ public class Day1 {
         System.out.println("Day1 - Part2: " + getTotalFuelForAllModules(modules));
     }
 
-    public static int getTotalFuelForAllModules(List<Integer> modules) {
+    private static int getTotalFuelForAllModules(List<Integer> modules) {
         int totalFuelForAllModules = 0;
         for (Integer module : modules)
             totalFuelForAllModules += getTotalFuelRequirements(module);
@@ -28,10 +28,10 @@ public class Day1 {
 
     private static int getTotalFuelRequirements(int moduleMass) {
         int fuelForModuleWithFuel = 0;
-        int mass = moduleMass;
-        while (mass > 6) {
-            mass = getFuelRequirements(mass);
-            fuelForModuleWithFuel += mass;
+        int fuelMass = getFuelRequirements(moduleMass);
+        while (fuelMass > 0) {
+            fuelForModuleWithFuel += fuelMass;
+            fuelMass = getFuelRequirements(fuelMass);
         }
         return fuelForModuleWithFuel;
     }
